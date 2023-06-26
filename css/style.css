@@ -3,7 +3,7 @@
 /* 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
 
-@font-face {
+/* @font-face {
     font-family: "Roboto";
     src: url("font/Roboto-Regular.ttf");
   }
@@ -17,11 +17,8 @@
     font-family: "Roboto-Black";
     src: url("font/Roboto-Black.ttf");
   }
+   */
   
-  /* @font-face {
-    font-family: ;
-    src: url();
-  } */
   
   /* 
   Une mise en page flexible doit avoir un élément parent avec la propriété display définie sur flex.
@@ -145,9 +142,10 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       background-color: #fff;
   } */
-  
+
+  /* ------------------- Fin RESET ------------------- */
   .container{
-      width: 1400px;
+      width: 1052px;
       margin: auto;
   }
   
@@ -158,7 +156,7 @@
   .ul_reset{
       display: flex;
       list-style-type: none;
-      justify-content: center;
+      
   }
   
   .ul_reset a{
@@ -171,50 +169,272 @@
       color: black;
   }
   
-  /* ------------------- Fin RESET ------------------- */
+  
   
   /* //////// FONT //////// */
   
+  @font-face {
+    font-family: "Liberation-regular";
+    src: url(../font/LiberationSans-Regular-webfont.ttf);
+  }
   
+  @font-face {
+    font-family: "Liberation-semibold";
+    src: url(../font/LiberationSans-Bold-webfont.ttf);
+  }
   
   /* /////////////////////////// CODE /////////////////////////// */
   
-  
+  body{
+    font-family: Liberation-regular;
+  }
   
   
   /******************* HEADER *******************/
+  header{
+    background-color: white;
+    padding-top: 30px;
+  }
+
+  .logo{
+    width: 200px;
+  }
+
+  /* .entete2{
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .bonjour{
+    text-align: end;
+  }
+
+  .hdr{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hdr>div{
+    width: 500px;
+  }
   
-  /*  --------------- Fin HEADER --------------- */
+  
   
   /******************* NAV *******************/
-  
+  .jaune{
+    color: #ea9f06;
+  }
+
+  .lien_hdr{
+    justify-content: end;
+  }
+
+  .lien_hdr li{
+    margin-left: 20px;
+  }
+
+  nav{
+    align-items: end;
+  }
+
+  .entete2{
+    align-items: end;
+  }
+
   /*  --------------- Fin NAV--------------- */
   
-  
+
+  /*  --------------- Fin HEADER --------------- */
+
+
   /*//////////////////// MAIN ////////////////////*/
   
-  
+  main{
+    background-color: black;
+  }
+
+  .container_main{
+    background-image: url(../img/background.jpg);
+  }
+
   /***************** SECTION 1 *****************/
-  
+  .sect1{
+    background-image: url(../img/header-page-catalogue.png);
+    width: 1052px;
+    height: 334px;
+
+  }
+
   /*  ------------- Fin SECTION 1 ------------- */
   
   /***************** SECTION 2 *****************/
-  
+
+  .sect2{
+    margin-top: 40px;
+    width: 1052px;
+    padding-bottom: 100px;
+  }
+
+  .wrap{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+  }
+
+  .produit{
+    width: 350px;
+    margin: 40px;
+  }
+
+
+  .gant{
+    /* width: 400px; */
+    position: relative;
+  }
+
+  .legende{
+    position: absolute;
+    /* transform: translate(25%,-200%); */
+    text-align: center;
+    bottom: 15px;
+    /* left: 60px; */
+    width: 400px;
+  }
+
+  .promo{
+    background-color: black;
+    border-radius: 10px;
+    padding: 4px;
+    width: 100px;
+    position: absolute;
+    right: -50px;
+    top: 20px;
+  }
+
+  .promo>p{
+    text-align: center;
+    font-size: 25px;
+    font-family: Liberation-semibold;
+  }
+
+  .btn_vente{
+    background-color: black;
+    color: white;
+    border: none;
+    width: 200px;
+    padding: 5px 0;
+    font-size: 15px;
+  }
+
+  .barre{
+    text-decoration: line-through;
+  }
+
+  .barre,
+  .prix{
+    margin-left: 30px;
+    font-size: 25px;
+  }
+
+  .zone_achat{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+
+
+  /* .essai{
+    background-color: black;
+    padding: 20px;
+    width: 100px;
+  } */
+
+  .zone_achat{
+    font-family: Liberation-semibold;
+  }
+
   /*  ------------- Fin SECTION 2 ------------- */
   
   /***************** SECTION 3 *****************/
   
-  /*  ------------- Fin SECTION 3 ------------- */
-  
-  /***************** SECTION 4 *****************/
-  
-  /*  ------------- Fin SECTION 4 ------------- */
-  
-  /*  --------------- Fin MAIN--------------- */
-  
+  /*  ------------- Fin SECTION 3 ------------- */  
   
   /*//////////////////// FOOTER ////////////////////*/
-  
+
+  footer{
+    background-color: #373737;
+  }
+
+  /*------- FOOTER - PARTIE 1 (info site)---------*/
+
+.ftr_nav{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.ul_ftr{
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px 0;
+    position: absolute;
+    bottom: -30px;
+}
+
+.ul_ftr>li{
+    margin: 0 20px;
+}
+
+.ul_ftr a{
+color: #373737;
+}
+
+  /*------- FOOTER - PARTIE 2 (les services)-------*/
+
+  .icone{
+    width: 60px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+
+  .service_a{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .service_b{
+    width: 240px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+  }
+
+   /*----- FOOTER - PARTIE 3 (réseaux sociaux)-----*/
+
+  .reseau{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .reseau>div{
+    height: 80px;
+    margin: 0 40px;
+  }
+
+/*----- FOOTER - PARTIE 4 (copyrigth) -----*/
+  .copy{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
   
   
   
@@ -233,6 +453,13 @@
   } */
   /*  ------------- max-width: px ------------- */
   
+
+  
+/***************** max-width: 576px *****************/
+/* @media (max-width: 576px) {
+
+} */
+/*  ------------- max-width: 576px ------------- */
   
   
   /*************** fin MEDIAQUERY ***************/
