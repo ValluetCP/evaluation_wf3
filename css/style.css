@@ -130,18 +130,7 @@
       width:100%;
       display:block;
   }
-  /* body{
-      font-family:Arial;
-      background-image: url("../img/fond.png");
-    
-  } */
-  
-  /* .container{
-      width:1000px;
-      margin:0 auto;pour centrer la page dans le navigateurs
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      background-color: #fff;
-  } */
+
 
   /* ------------------- Fin RESET ------------------- */
 
@@ -529,6 +518,7 @@ color: #ea9f06;
 
     .bonjour{
         text-align: start;
+        margin-left: 40px;
     }
 
     .lien_hdr{
@@ -538,6 +528,10 @@ color: #ea9f06;
 
     .lien_hdr li{
         margin: 0 40px;
+    }
+
+    .entete2 {
+        margin-top: 70px;
     }
 
 
@@ -566,7 +560,7 @@ color: #ea9f06;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        width: 1060px;
+        width: 860px;
         
     }
 }
