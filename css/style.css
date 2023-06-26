@@ -144,6 +144,9 @@
   } */
 
   /* ------------------- Fin RESET ------------------- */
+
+/* //////// CODE PRE-PARAMETRE //////// */
+
   .container{
       width: 1052px;
       margin: auto;
@@ -187,28 +190,17 @@
   
   body{
     font-family: Liberation-regular;
+    background-color: #1c1c1c;
   }
   
   
   /******************* HEADER *******************/
   header{
-    background-color: white;
+    background-image: url(../img/background.jpg);
     padding-top: 30px;
+    padding-bottom: 30px;
   }
-
-  .logo{
-    width: 200px;
-  }
-
-  /* .entete2{
-    display: flex;
-    flex-direction: column;
-  } */
-
-  .bonjour{
-    text-align: end;
-  }
-
+  
   .hdr{
     display: flex;
     justify-content: space-around;
@@ -220,17 +212,46 @@
   
   
   
-  /******************* NAV *******************/
+  /*------------- HEADER - parti 1 (logo)-------------*/
+
+  .logo{
+    width: 200px;
+  }
+  
+  h1{
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Liberation-regular;
+    font-weight: 500;
+  }
+
+  .entete{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /*---------- HEADER - parti 2 (navigation)----------*/
   .jaune{
     color: #ea9f06;
   }
 
+  .bonjour{
+    text-align: end;
+  }
+
+
   .lien_hdr{
     justify-content: end;
+    margin-top: 20px;
   }
 
   .lien_hdr li{
     margin-left: 20px;
+  }
+  
+  .lien_hdr>li a:hover{
+    color: #ea9f06;
   }
 
   nav{
@@ -238,11 +259,11 @@
   }
 
   .entete2{
-    align-items: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  /*  --------------- Fin NAV--------------- */
-  
 
   /*  --------------- Fin HEADER --------------- */
 
@@ -250,18 +271,23 @@
   /*//////////////////// MAIN ////////////////////*/
   
   main{
-    background-color: black;
+    background-color: #1c1c1c;
   }
 
   .container_main{
-    background-image: url(../img/background.jpg);
+    /* background-image: url(../img/background.jpg); */
+    background-color: #f3f3f3;
+    margin-top: 20px;
   }
 
   /***************** SECTION 1 *****************/
   .sect1{
     background-image: url(../img/header-page-catalogue.png);
-    width: 1052px;
-    height: 334px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 330px;
 
   }
 
@@ -299,11 +325,11 @@
     text-align: center;
     bottom: 15px;
     /* left: 60px; */
-    width: 400px;
+    width: 350px;
   }
 
   .promo{
-    background-color: black;
+    background-color: #1c1c1c;
     border-radius: 10px;
     padding: 4px;
     width: 100px;
@@ -319,7 +345,7 @@
   }
 
   .btn_vente{
-    background-color: black;
+    background-color: #1c1c1c;
     color: white;
     border: none;
     width: 200px;
@@ -386,11 +412,25 @@
 }
 
 .ul_ftr>li{
-    margin: 0 20px;
+    margin: 0 8px;
+    font-size: 13px;
 }
 
 .ul_ftr a{
 color: #373737;
+}
+
+.ul_ftr a:hover{
+color: #ea9f06;
+}
+
+.ul_ftr>li>div{
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+
 }
 
   /*------- FOOTER - PARTIE 2 (les services)-------*/
@@ -405,7 +445,9 @@ color: #373737;
   .service_a{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
+    /* padding-bottom: 20px; */
+    padding-top: 100px;
   }
 
   .service_b{
@@ -413,6 +455,12 @@ color: #373737;
     text-align: center;
     color: white;
     font-size: 12px;
+  }
+
+  .border{
+    border: 1px solid #818181;
+    width: 100%;
+    margin-top: 30px;
   }
 
    /*----- FOOTER - PARTIE 3 (réseaux sociaux)-----*/
@@ -440,26 +488,153 @@ color: #373737;
   
   
   
-  
-  
-  
-  
   /*//////////////// MEDIA QUERY /////////////////*/
   
   
-  /***************** max-width: px *****************/
-  /* @media (max-width: px) {
   
-  } */
-  /*  ------------- max-width: px ------------- */
+
+  /***************** max-width: 1070px *****************/
+
+@media (max-width: 1070px) {
+
+
+    .container_main{
+        width: 85%;
+        margin: auto;
+        
+    }
+
+
+    /*---- HEADER  - mediaquery 1070px-----*/
+  
+    .hdr{
+        display: block;
+        justify-content: center;
+    }
+
+    .hdr>div{
+        width: 100%;
+    }
+
+
+    /*---- HEADER 1070px- parti 1 (logo)-----*/
+
+    .logo {
+        width: 300px;
+        margin: auto;
+    }
+
+
+    /*---- HEADER 1070px- parti 2 (navigation)-----*/
+
+    .bonjour{
+        text-align: start;
+    }
+
+    .lien_hdr{
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .lien_hdr li{
+        margin: 0 40px;
+    }
+
+
+    /*----------- MAIN - 1070px------------*/
+    .container_main {
+        margin-top: 35px;
+    }
+
+    /* .container_main{
+        margin-top: 30px;
+    } */
+
+    /*---------- SECTION 1 - 1070px ----------*/
+    .entete2{
+        width: 800px;
+    }
+
+
+    /*---- SECTION 2 - 1070px-----*/
+
+    .sect2{
+        width: 100%;
+    }
+
+    .wrap{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 1060px;
+        
+    }
+}
+
+  /*  ------------- fin max-width: 1070px ------------- */
   
 
   
 /***************** max-width: 576px *****************/
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
 
-} */
-/*  ------------- max-width: 576px ------------- */
+    
+
+    /*---- HEADER  - mediaquery 576px-----*/
+
+    .container{
+        width: 90%;
+        margin: auto;
+        /* margin-top: 30px; */
+    }
+
+    /*---- HEADER 576px- parti 1 (logo)-----*/
+    h1    {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .entete2{
+        margin-top: 50px;
+    }
+
+    .bonjour{
+        margin-left: 20px;
+    }
+
+    .lien_hdr li{
+        margin: 0 20px;
+    }
+
+    .container_main{
+        margin-top: 30px;
+    }
+    /*---- SECTION 2 - 576px-----*/
+
+    .sect2{
+        width: 100%;
+    }
+
+    .wrap{
+        width: 100%;
+
+    }
+    
+
+    /*---- FOOTER - 576px-----*/
+
+    .container_ftr{
+        width: 90%;
+    }
+
+  /*---- FOOTER - - PARTIE 2 (les services) - 576px-----*/
+    .service_b {
+        width: 205px;
+        margin: 10px;
+    }
+}
+
+/*  ------------- fin max-width: 576px ------------- */
   
   
   /*************** fin MEDIAQUERY ***************/
